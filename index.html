@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puranjay Datta - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>Puranjay Datta</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#research"><i class="fas fa-flask"></i> Research</a></li>
+                <!-- <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li> -->
+                <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+          <i class="fas fa-sun"></i>
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+          <i class="fas fa-moon"></i>
+      </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-container">
+            <section id="about">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-image">
+                            <img src="public/logo.png" alt="Puranjay Datta">
+                        </div>
+                        <div class="about-text">
+                            <h2>About Me</h2>
+                            <p>
+                            I am a Pre-Doctoral Researcher at Google DeepMind, India, as part of the Machine Learning and Optimization team. With my advisors, <a href="https://adityakusupati.github.io/">Dr. Aditya Kusupati</a> and <a href="https://www.prateekjain.org/">Dr. Prateek Jain</a>, my research focuses on elastic and efficient pre-training, quantization, and reinforcement learning for chain-of-thought (CoT) post-training of LLMs. I also collaborate with <a href="https://sites.google.com/corp/view/karthikeyan-shanmugam/">Dr. Karthikeyan Shanmugam</a> on score-based unsupervised learning for embodied reasoning and world modeling. During my tenure at IIT Bombay, I worked on Edge ML inference using Online Learning and Bandit Algorithms under the guidance of <a href="https://www.ee.iitb.ac.in/web/people/sharayu-moharir/">Dr. Sharayu Moharir</a> and <a href="https://sites.google.com/corp/site/jayachampati">Dr. Jaya Prakash Champati</a>.
+                            </p>
+                            <p>
+                            My research interests focus on making LLMs more computationally efficient by enabling them to dynamically allocate their compute budget based on task complexity. I am keen on exploring training paradigms that move beyond next-token prediction to build robust world models for real world interactive reasoning which involves utilizing more effective feedback mechanisms, such as interventions and imitation learning, as alternatives to standard teacher-forcing architectures and simple, verifiable rewards.
+                            </p>
+                              
+                          <div class="social-links-home">
+                            <a href="https://github.com/puranjay14" target="_blank"><i class="fab fa-github"></i> GitHub</a> /
+                            <a href="https://www.linkedin.com/in/puranjay-datta-a238a1239/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> /
+                            <a href="https://x.com/puranjay1412" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> /
+                            <a href="https://scholar.google.com/citations?user=QgqpZ_MAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+            <section id="research">
+                    <div class="container">
+                    <h2>Research</h2>
+                    <div class="research-list">
+                        <div class="research-card">
+                            <img src="public/research1.jpg" alt="Research 1 Image">
+                            <div class="research-info">
+                                <h3><a>Gemini 2.5 Pro and Gemini 2.0</a></h3>
+                                <p class="authors">Gemini Team (Including Puranjay Datta)</p>
+                                <p>Contributed to Gemini Model Pretraining</p>
+                                <div class="links">
+                                    <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Gemini 2.5 Pro Technical Report</a> &middot;
+                                    <a href="https://blog.google/products/gemini/gemini-2-5-model-family-expands/" target="_blank"><i class="fab fa-google"></i> Google Blog (Gemini 2.5 Pro)</a> &middot;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <img src="public/research2.jpg" alt="Research 2 Image">
+                            <div class="research-info">
+                                <h3><a>Matryoshka quantization</a></h3>
+                                <p class="authors"><b>Puranjay Datta</b>*, Pranav Nair*, Jeff Dean, Prateek Jain, Aditya Kusupati</p>
+                                <p class="conference">ICML 2025</p>
+                                <div class="links">
+                                    <span class="spotlight"><i class="fas fa-trophy"></i> Oral SLLM Workshop, ICLR 2025</span> &middot;
+                                    <a href="https://arxiv.org/pdf/2502.06786" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> &middot;
+                                    <a href="public/ICML Matryoshka Quantization Poster.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <img src="public/research3.jpg" alt="Research 3 Image">
+                            <div class="research-info">
+                                <h3><a href="https://openreview.net/pdf?id=LkQcEVFDfK">ROPES: Robotic Pose Estimation via Score-based Causal Representation Learning</a></h3>
+                                <p class="authors"><b>Puranjay Datta</b>*, Pranamya Kulkarni*, Emre Acartürk, Burak Varici, Karthikeyan Shanmugam, Ali Tajer</p>
+                                <p class="conference">In Submission</p>
+                                <div class="links">
+                                    <span class="spotlight">EWM Workshop Neurips 2025, Under review at ICLR 2026</span> &middot;
+                                    <a href="https://openreview.net/pdf?id=LkQcEVFDfK" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <img src="public/research4.jpg" alt="Research 4 Image" class="contain-fit">
+                            <div class="research-info">
+                                <h3><a href="https://openreview.net/pdf?id=DbOqN3kGVb">Online Learning with Stochastically Partitioning Experts</a></h3>
+                                <p class="authors"><b>Puranjay Datta</b>, Sharayu Moharir, Jaya Prakash Champati</p>
+                                <p class="conference">UAI 2025</p>
+                                <div class="links">
+                                    <a href="https://openreview.net/pdf?id=DbOqN3kGVb" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> &middot;
+                                    <a href="public/UAI_2025_poster.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <img src="public/research5.jpg" alt="Research 5 Image" class="contain-fit">
+                            <div class="research-info">
+                                <h3><a href="httpsdspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y">Regret Bounds for Online Learning for Hierarchical Inference</a></h3>
+                                <p class="authors">Ghina Al-Atat, <b>Puranjay Datta</b>, Sharayu Moharir, Jaya Prakash Champati</p>
+                                <p class="conference">MobiHoc 2024</p>
+                                <div class="links">
+                                    <a href="httpsdspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="research-card">
+                            <img src="public/research6.jpg" alt="Research 6 Image" class="contain-fit">
+                            <div class="research-info">
+                                <h3><a href="https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/">Gemma 3n MatFormer Lab</a></h3>
+                                <p class="authors"><b>Puranjay Datta</b>, Aditya Kusupati, Omar Sanseviero, Rakesh Shivanna, Gemma Team</p>
+                                <p class="conference"></p>
+                                <div class="links">
+                                    <a href="https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> &middot;
+                                    <a href="https://colab.sandbox.google.com/github/google-gemini/gemma-cookbook/blob/main/Gemma/[Gemma_3n]MatFormer_Lab.ipynb#scrollTo=4o6A5O7ofZTH" target="_blank"><i class="fas fa-code"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+        
+            <footer>
+              <div class="container">
+                <p>&copy; 2025 Puranjay Datta</p>
+              </div>
+            </footer>
+          </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
