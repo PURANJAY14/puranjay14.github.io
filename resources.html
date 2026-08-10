@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puranjay Datta - Resources</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Applies the saved theme (dark by default) before first paint, so the
+         page never flashes the wrong background. Full logic lives in main.js. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('theme') !== 'light') {
+            document.body.classList.add('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>Puranjay Datta</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#research"><i class="fas fa-flask"></i> Research</a></li>
+                <!-- <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li> -->
+                <li><a href="resources.html" class="active"><i class="fas fa-book-open"></i> Resources</a></li>
+                <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+          <i class="fas fa-sun"></i>
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+          <i class="fas fa-moon"></i>
+      </div>
+    </div>
+
+    <div class="main-content">
+        <div class="resources-page">
+            <header class="resources-header">
+                <h1>Resources</h1>
+                <p class="lede">
+                    A running list of things worth reading and re-reading &mdash; GPU kernels, LLM inference,
+                    RL and post-training, agent harnesses, architectures. Each entry notes who wrote it and
+                    what is actually inside, so it can be found again later.
+                </p>
+            </header>
+
+            <div class="resources-toolbar">
+                <div class="search-wrap">
+                    <i class="fas fa-search"></i>
+                    <input
+                        type="search"
+                        id="resource-search"
+                        placeholder="Search by keyword, author, topic&hellip; (e.g. &ldquo;paged attention&rdquo;, &ldquo;deltanet&rdquo;, &ldquo;aleksa&rdquo;)"
+                        autocomplete="off"
+                        aria-label="Search resources">
+                    <button type="button" id="search-clear" aria-label="Clear search" hidden><i class="fas fa-times"></i></button>
+                    <span class="search-hint">/</span>
+                </div>
+                <div class="filter-row">
+                    <div id="resource-filters" class="filter-row" style="margin-top: 0;"></div>
+                    <label class="sort-control">
+                        <span>Sort</span>
+                        <select id="resource-sort" aria-label="Sort resources">
+                            <option value="default">By topic</option>
+                            <option value="newest">Newest added</option>
+                            <option value="oldest">Oldest added</option>
+                        </select>
+                    </label>
+                    <span id="resource-count"></span>
+                </div>
+            </div>
+
+            <section id="inbox" class="inbox" hidden>
+                <div class="inbox-head">
+                    <h2><i class="fas fa-inbox"></i> Link inbox</h2>
+                    <span id="inbox-count" class="inbox-count"></span>
+                </div>
+                <p class="inbox-lede">
+                    Saved in this browser only &mdash; nothing is uploaded and nothing appears on the
+                    page until the entries are written into <code>resources.js</code> and pushed.
+                </p>
+
+                <form id="inbox-form" class="inbox-form" autocomplete="off">
+                    <input type="url" id="inbox-url" placeholder="Paste a link&hellip;" aria-label="Link URL" required>
+                    <input type="text" id="inbox-note" placeholder="Note (optional)" aria-label="Optional note">
+                    <button type="submit" class="inbox-add"><i class="fas fa-plus"></i> Add</button>
+                </form>
+
+                <p id="inbox-status" class="inbox-status" role="status" aria-live="polite"></p>
+
+                <ul id="inbox-list" class="inbox-list"></ul>
+                <p id="inbox-empty" class="inbox-hint">
+                    Nothing queued. Paste links here as you find them, then run
+                    <code>claude</code> in this repo and ask it to add them.
+                </p>
+
+                <div class="inbox-actions">
+                    <button type="button" id="inbox-copy" disabled><i class="fas fa-copy"></i> Copy links</button>
+                    <button type="button" id="inbox-download" disabled><i class="fas fa-download"></i> Download inbox.json</button>
+                    <!-- Clear is revealed on localhost only (see inbox.js) -->
+                    <button type="button" id="inbox-clear" class="inbox-danger" disabled hidden><i class="fas fa-trash"></i> Clear</button>
+                </div>
+            </section>
+
+            <div id="resource-list" class="resource-list"></div>
+
+            <div id="resource-empty" class="resources-empty" hidden>
+                <i class="fas fa-inbox"></i>
+                <p>No resources match that search. Try a broader keyword.</p>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Puranjay Datta</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="resources.js"></script>
+    <script src="inbox.js"></script>
+</body>
+</html>
