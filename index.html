@@ -6,8 +6,22 @@
     <title>Puranjay Datta - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Applies the saved theme (dark by default) before first paint, so the
+         page never flashes the wrong background. Full logic lives in main.js. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('theme') !== 'light') {
+            document.body.classList.add('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <div class="sidebar">
         <div class="logo">
             <h1>Puranjay Datta</h1>
@@ -17,6 +31,7 @@
                 <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="index.html#research"><i class="fas fa-flask"></i> Research</a></li>
                 <!-- <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li> -->
+                <li><a href="resources.html"><i class="fas fa-book-open"></i> Resources</a></li>
                 <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
             </ul>
         </nav>
@@ -76,7 +91,7 @@
                         <div class="research-card">
                             <img src="public/research2.jpg" alt="Research 2 Image">
                             <div class="research-info">
-                                <h3><a>Matryoshka quantization</a></h3>
+                                <h3><a>Matryoshka Quantization</a></h3>
                                 <p class="authors"><b>Puranjay Datta</b>*, Pranav Nair*, Jeff Dean, Prateek Jain, Aditya Kusupati</p>
                                 <p class="conference">ICML 2025</p>
                                 <div class="links">
@@ -113,11 +128,11 @@
                         <div class="research-card">
                             <img src="public/research5.jpg" alt="Research 5 Image" class="contain-fit">
                             <div class="research-info">
-                                <h3><a href="httpsdspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y">Regret Bounds for Online Learning for Hierarchical Inference</a></h3>
+                                <h3><a href="https://dspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y">Regret Bounds for Online Learning for Hierarchical Inference</a></h3>
                                 <p class="authors">Ghina Al-Atat, <b>Puranjay Datta</b>, Sharayu Moharir, Jaya Prakash Champati</p>
                                 <p class="conference">MobiHoc 2024</p>
                                 <div class="links">
-                                    <a href="httpsdspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+                                    <a href="https://dspace.networks.imdea.org/bitstream/handle/20.500.12761/1897/RegretBoundsforOnlineLearningforHierarchicalInference-fontsembedded.pdf?sequence=1&isAllowed=y" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
                                 </div>
                             </div>
                         </div>
