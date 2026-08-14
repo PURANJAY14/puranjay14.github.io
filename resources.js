@@ -314,6 +314,21 @@ const RESOURCES = [
     tags: ['ppo', 'grpo', 'sapo', 'rspo', 'policy optimization', 'post-training', 'importance sampling', 'trust region', 'clipping', 'variance reduction', 'moe', 'rl'],
   },
   {
+    title: 'Why On-Policy Distillation Works and Naive Self-Distillation Doesn\'t',
+    url: 'https://x.com/rish2k1/article/2068414528598286485',
+    author: 'Rishabh Tiwari et al.',
+    handle: '@rish2k1 · CS PhD, UC Berkeley (ex-DeepMind, FAIR)',
+    source: 'X (article)',
+    type: 'thread',
+    date: 'Jun 20, 2026',
+    category: 'Training & RL',
+    added: '2026-08-14',
+    summary:
+      'Shows that distilling toward a reward-tilted teacher is exactly KL-regularized RL — the on-policy reverse KL decomposes into "stay near the current policy" minus β·E[R] — so distillation only climbs on reward when the teacher puts more mass on high-reward trajectories while staying close to the student. Naive self-distillation, where the teacher is the student conditioned on privileged context (gold answer, reference solution, prior-attempt feedback), badly violates that: it up-weights the response *shape* rather than reward, giving fabricated-reference rollouts ~70 nats more probability than the student regardless of correctness. The trained student then hallucinates references it never received (82-100% of traces), collapses epistemic verbalization from ~86 hedging tokens per response to under 10, and trails pure RL by 6-25 points out of distribution. Prompt optimization (GEPA) and loss patches only help insofar as they weaken the distillation term; none reach plain RL.',
+    tags: ['on-policy distillation', 'self-distillation', 'rl', 'kl regularization', 'reward tilting', 'hallucination', 'ood generalization', 'grpo', 'cispo', 'gepa', 'qwen3', 'post-training', 'epistemic verbalization'],
+    note: 'With Kusha Sareen, Devvrit Khatri, Lakshya A Agrawal, Kurt Keutzer, Matei Zaharia, Inderjit Dhillon, Rishabh Agarwal. Points at POPE and FST as self-distillation approaches that do work.',
+  },
+  {
     title: 'Zero train–inference mismatch for linear attention under async RL',
     url: 'https://x.com/yichuanm/status/2085463113189802207',
     author: 'Yichuan Wang',
